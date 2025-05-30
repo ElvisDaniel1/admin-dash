@@ -1,12 +1,115 @@
-.srch-card {
-    width: 100px;
+/*----------GLOBALS----------*/
+* {
+    margin: 0;
+        
 }
-.usr-icon {
-    border-radius: 50%;
-    height: 100px;
+body {
+    height: 100vh;
+}
 
+main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 100px 100px 1fr 1fr;
 }
+
+
+/*----------SEARCHBAR----------*/
+.srch-card {
+    height: 100%;
+    grid-area: 1 / 2 / 2 / 4;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+.srch-card .srch-left,
+.srch-card .srch-right {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 20px;
+}
+.srch-card input {
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.548);
+    width: 35vw;
+    height: 30px;
+}
+
+
+/*----------WELCOME----------*/
+.welcome-card {
+    grid-area: 2 / 2 / 3 / 4;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-card .usr-left, 
+.welcome-card .usr-right {
+    margin: 0 20px;
+}
+
+.welcome-card .usr-left {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.usr-left .usr-icon {
+    height: 80px;
+}
+
+.welcome-card .usr-right {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+}
+.welcome-card .usr-right button {
+    border: none;
+    background-color: rgb(0, 145, 255);
+    color: white;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+
+/*----------DASH-CARD----------*/
+.dash-card {
+    grid-area: 1 / 1 / 5 / 2;
+    background-color: rgb(0, 145, 255);
+    color: white;
+}
+.dash-card svg {
+    fill: white;
+}
+
+.content-card {
+    grid-area: 3 / 2 / 5 / 3;
+}
+
+.updates-card {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.trending-card {
+    grid-area: 4 / 3 / 5 / 3;
+}
+
 
 svg {
-    height: 50px;
+    height: 30px;
+}
+
+img {
+    height: 40px;
+    border-radius: 50%;
 }
