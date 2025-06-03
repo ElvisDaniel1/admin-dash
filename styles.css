@@ -18,6 +18,10 @@ main {
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 100px 100px 1fr 1fr;
 }
+
+h2 {
+    margin-bottom: 20px;
+}
 /*----------GLOBALS-END----------*/
 
 
@@ -30,6 +34,8 @@ main {
     justify-content: space-between;
     align-items: center;
     margin: 0 20px;
+    font-size: 20px;
+    font-weight: 700;
 }
 .srch-card .srch-left,
 .srch-card .srch-right {
@@ -61,6 +67,16 @@ main {
 -moz-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
     padding-bottom: 20px;
 }
+.welcome-card p {
+    font-weight: 700;
+}
+.welcome-card .uName {
+    font-size: 30px;
+}
+.welcome-card .usr-right button {
+    font-weight: 700;
+    font-size: 15px;
+} 
 
 .welcome-card .usr-left, 
 .welcome-card .usr-right {
@@ -149,7 +165,7 @@ div.main {
     grid-template-columns: 3fr 1fr;
     background-color: rgba(128, 128, 128, 0.548);
     padding-top: 40px;
-
+    gap: 30px;
 }
 div.main .main-left {
     grid-area: 1 / 1 / 3 / -3;
@@ -172,34 +188,73 @@ div.main div.main-left div.content-card div.content-container {
 } 
 
 div.main div.content-card div.content-item {
-    height: auto;
     background: white;
     padding: 30px 20px;
+    border-radius: 10px;
+    position: relative;    
 
-    }
+    height: 180px;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: 1fr 40px;
+}
+div.main div.content-card div.content-item::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10px;
+    background-color: rgb(255, 200, 0);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+div.main div.content-card div.content-item div.content-top {
+    grid-area: 1 / 1 / 3 / 2;    
+    /*margin-top: auto;*/
+} 
+div.main div.content-card div.content-item div.content-bottom {
+    grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+}
+
+div.main div.content-card div.content-item div.content-bottom {
+    
+}
 /*----------CONTENT-CARD-END----------*/
 
 
-.content-card,
-.updates-card,
-.trending-card {
+/*---------UPDATES-CARD----------*/
+.main-right .updates-card div {
+    background-color: white;
+    padding: 30px 20px;    
+    font-size: 15px;
     
-    
+
+    position: relative;
+} 
+.main-right .updates-card div::after {
+    position: absolute;
+    content: "";
+    bottom: -1px;
+    width: 80%;
+    height: 2px;
+    background-color: grey;
+}
+.main-right .updates-card div:first-of-type {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.main-right .updates-card div:last-of-type {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 20px;
 }
 
-/*
-.content-card {
-    grid-area: 3 / 2 / 5 / 3;
-}
-
-.updates-card {
-    grid-area: 3 / 3 / 4 / 4;
-}
-
-.trending-card {
-    grid-area: 4 / 3 / 5 / 3;
-}
-*/
+/*----------UPDATES-CARD-END----------*/
 
 svg {
     height: 30px;
