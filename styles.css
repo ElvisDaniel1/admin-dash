@@ -1,7 +1,12 @@
 /*----------GLOBALS----------*/
+@font-face {
+    font-family: satoshiFont;
+    src: url(font/Satoshi-Regular.woff2);
+}
+
 * {
     margin: 0;
-        
+    font-family: satoshiFont;
 }
 body {
     height: 100vh;
@@ -87,10 +92,48 @@ main {
     grid-area: 1 / 1 / 5 / 2;
     background-color: rgb(0, 145, 255);
     color: white;
+    padding-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
 }
 .dash-card svg {
     fill: white;
 }
+.dash-card .home-logo {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 60px 1fr;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    font-size: 25px;
+}
+.dash-card .home-logo svg {
+    height: 50px;
+}
+
+.dash-card ul li {
+    list-style: none;
+}
+
+.dash-card .dash-top {
+    margin: 50px 0;
+}
+.dash-card .dash-top ul,
+.dash-card .dash-bottom ul {
+    display: grid;
+    gap: 20px;
+}
+.dash-card .dash-top ul li,
+.dash-card .dash-bottom ul li {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 60px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .content-card {
     grid-area: 3 / 2 / 5 / 3;
