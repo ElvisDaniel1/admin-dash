@@ -8,8 +8,11 @@
     margin: 0;
     font-family: satoshiFont;
 }
-body {
-    height: 100vh;
+
+
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
 main {
@@ -21,6 +24,17 @@ main {
 
 h2 {
     margin-bottom: 20px;
+}
+
+
+
+svg {
+    height: 30px;
+}
+
+img {
+    height: 40px;
+    border-radius: 50%;
 }
 /*----------GLOBALS-END----------*/
 
@@ -36,6 +50,7 @@ h2 {
     margin: 0 20px;
     font-size: 20px;
     font-weight: 700;
+    padding-top: 5px;
 }
 .srch-card .srch-left,
 .srch-card .srch-right {
@@ -65,7 +80,7 @@ h2 {
     box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
 -webkit-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
 -moz-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
-    padding-bottom: 20px;
+    padding: 10px 0; 
 }
 .welcome-card p {
     font-weight: 700;
@@ -118,6 +133,7 @@ h2 {
     padding-top: 20px;
     font-weight: 600;
     font-size: 20px;
+    padding-top: 20px;
 }
 .dash-card svg {
     fill: white;
@@ -164,7 +180,7 @@ div.main {
     display: grid;
     grid-template-columns: 3fr 1fr;
     background-color: rgba(128, 128, 128, 0.548);
-    padding-top: 40px;
+    padding: 40px 0;
     gap: 30px;
 }
 div.main .main-left {
@@ -221,24 +237,37 @@ div.main div.content-card div.content-item div.content-bottom {
     gap: 10px;
 }
 
-div.main div.content-card div.content-item div.content-bottom {
-    
-}
 /*----------CONTENT-CARD-END----------*/
 
 
 /*---------UPDATES-CARD----------*/
-.main-right .updates-card div {
-    background-color: white;
-    padding: 30px 20px;    
-    font-size: 15px;
-    
+.main-right .updates-card {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; 
+}
 
+.main-right .updates-card div {
+    display: grid;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;    
+    font-size: 15px;
     position: relative;
+    height: 90px;
+    overflow: clip;
 } 
+
+.main-right .updates-card div p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .main-right .updates-card div::after {
     position: absolute;
     content: "";
+    left: 20px;
     bottom: -1px;
     width: 80%;
     height: 2px;
@@ -254,13 +283,31 @@ div.main div.content-card div.content-item div.content-bottom {
     padding-bottom: 20px;
 }
 
+
+/*----------UPDATES-TRENDING-GRID----------*/
+div.main-right {
+    border: 1px solid red;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+/*----------UPDATES-TRENDING-END----------*/
+
+
+/*----------UPDATES-CARD----------*/
+div.main-right div.updates-card {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
 /*----------UPDATES-CARD-END----------*/
 
-svg {
-    height: 30px;
-}
 
-img {
-    height: 40px;
-    border-radius: 50%;
+/*----------TRENDING-CARD----------*/
+div.trending-card {
+    margin-top: 20px;
 }
+div.trending-card .usr-card {
+    display: grid;    
+    grid-auto-flow: column;
+    grid-template-columns: 80px 1fr;
+}
+/*----------TRENDING-CARD-END----------*/
