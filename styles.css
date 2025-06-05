@@ -23,7 +23,7 @@ main {
 }
 
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 
@@ -134,6 +134,9 @@ img {
     font-weight: 600;
     font-size: 20px;
     padding-top: 20px;
+
+    height: 99vh;
+    overflow-y: auto; 
 }
 .dash-card svg {
     fill: white;
@@ -194,6 +197,9 @@ div.main .main-right {
 
 
 /*----------CONTENT-CARD----------*/
+div.main-left {
+    height: 10vh;
+}
 div.main div.main-left div.content-card div.content-container {
     display: grid;
     width: 100%;
@@ -289,6 +295,8 @@ div.main div.content-card div.content-item div.content-bottom {
 div.main-right {
     display: grid;
     grid-template-rows: 1fr 1fr;
+
+    height: 70vh;
 }
 /*----------UPDATES-TRENDING-END----------*/
 
