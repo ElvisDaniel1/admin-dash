@@ -202,7 +202,7 @@ div.main-left {
 }
 div.main div.main-left div.content-card div.content-container {
     display: grid;
-    width: 100%;
+    width: 40vw;
     box-sizing: border-box;
     gap: 15px;
     
