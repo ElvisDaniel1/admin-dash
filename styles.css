@@ -206,7 +206,7 @@ div.main div.main-left div.content-card div.content-container {
     box-sizing: border-box;
     gap: 15px;
     
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 } 
 
 div.main div.content-card div.content-item {
