@@ -202,11 +202,11 @@ div.main-left {
 }
 div.main div.main-left div.content-card div.content-container {
     display: grid;
-    width: 40vw;
+    width: 100%;
     box-sizing: border-box;
     gap: 15px;
     
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 } 
 
 div.main div.content-card div.content-item {
@@ -231,6 +231,13 @@ div.main div.content-card div.content-item::before {
     background-color: rgb(255, 200, 0);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+}
+
+div.main div.content-item div p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 div.main div.content-card div.content-item div.content-top {
